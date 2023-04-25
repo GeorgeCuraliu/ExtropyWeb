@@ -6,6 +6,7 @@ let events = new Events();
 
 
 window.onload = async function(){//will get the events data from the specific json file trought the url parameters
+
     const searchParams = new URLSearchParams(window.location.search);
     const year = searchParams.get('year');
     document.getElementById(`years`).innerHTML = year;
@@ -38,7 +39,7 @@ window.onload = async function(){//will get the events data from the specific js
                 <p class="name" >${eventsData[i].name}</p>
                 <p class="date">${eventsData[i].date}</p>
             </div>
-            <img class="image-container" src="" alt="">
+            <img class="image-container" src="${eventsData[i].image}" alt="">
         </div>
         `;
 
@@ -47,8 +48,14 @@ window.onload = async function(){//will get the events data from the specific js
             event.classList.add(`event-reverse`);
             event.querySelector(`.description-container`).classList.add(`description-container-reverse`);
             event.querySelector(`.image-container`).classList.add("image-reverse");
+            event.querySelector(`.name`).style.left = "50vw";
+            event.querySelector(`.date`).style.left = "50vw";
         }
         reverseEvent = !reverseEvent;
     }
-    
+    const body = document.body;
+    const bodyHeight = body.offsetHeight;
+    const windowHeight = window.innerHeight;
+    const finalHeight = bodyHeight + windowHeight * 0.3;
+    body.style.height = `${finalHeight}px`;
 }

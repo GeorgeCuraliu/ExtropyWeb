@@ -14,14 +14,6 @@
         <p id="years">2222-2222</p>
     </header>
     <div id="events-container">
-        <div class="event">
-            <div class="description-container">
-                <p>${eventsData[i].description}</p>
-                <p class="name" >name</p>
-                <p class="date">date</p>
-            </div>
-            <img class="image-container" src="" alt="">
-        </div>
     </div>
     
     <script src="events.js" type="module"></script>
