@@ -23,6 +23,7 @@
         background: linear-gradient(to bottom, var(--black) 0%, var(--darkBlue) 50%, var(--purple) 100%);
         display: flex;
         flex-direction: row;
+        overflow: hidden;
     }
     #right-section{
         width: 25%;
