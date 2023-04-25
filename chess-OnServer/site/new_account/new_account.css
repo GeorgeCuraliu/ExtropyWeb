@@ -1,0 +1,4 @@
+#bigContainer{
+    display: grid;
+    grid-template-columns: 5;
+}

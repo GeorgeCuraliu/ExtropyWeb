@@ -1,0 +1,143 @@
+#division-container{
+    display: flex;
+    flex-direction: row;
+    width: 98vw;
+    border: 10px solid black;
+    justify-content: space-between;
+    
+}
+#ideas{
+    
+    
+}
+#toDo{
+   
+}
+#inProgess{
+   
+}
+#Done{
+    
+}
+.sections{
+    width: 23vw;
+    height: auto;
+    border: 2px solid blue;
+    background-color: azure;
+}
+.section-title{
+    border: 0;
+    padding: 0;
+    margin: 2px;
+    z-index: 0;
+    position: relative;
+    left: 20px;
+}
+.card-add{
+    margin-left: 3%;
+    width: 90%;
+    height: 30px;
+    border: 2px solid red; 
+    display: grid;
+}
+.card{
+    width: 90%;
+    background-color: blanchedalmond;
+    padding-top: 20px;
+    margin: 0;
+    border: 2px solid gray;
+    display: flex;
+    flex-direction: row;
+    
+}
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.creator{
+    
+}
+.card-title {
+    position: relative;
+    left: 30px;
+  }
+  
+.card-creator {
+    
+}
+.left-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid black;
+    width: 85%;
+}
+.right-card{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    width: 15%;
+    
+}
+
+.card-add-button{
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    width: 100%;
+    
+}
+
+.card-add-button {
+    position: relative;
+    z-index: 2;
+  }
+.new-card{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    
+
+}
+.new-card-section{
+    display: flex;
+    flex-direction: row;
+}
+.new-card-input{
+    height: 20px;
+    position: relative;
+    top: 16px;
+}
+.confirm-add-card{
+    height: 20px;
+    position: relative;
+    left: 15px;
+    top: 19px;
+    
+}
+.card-content{
+    height: auto;
+    width: 85%;
+    word-wrap: break-word; 
+}
+.buttons-idea-container{
+    display: inherit;
+    width: 100%;
+    flex-direction: row;
+}
+.button-idea{
+    width: 15px;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
