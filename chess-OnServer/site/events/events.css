@@ -105,6 +105,7 @@ p{
     z-index: 110;
     font-size: 1.3vw;
     font-weight: bolder;
+    color: #f27dce;
 }
 .description-container::before{
     content: "";
@@ -134,6 +135,18 @@ p{
     position: relative;
     left: 0vw !important;
     
+}
+.name{
+    position: absolute;
+    bottom: 31vh;
+    left: 32vh;
+    font-size: 3vh;
+}
+.date{
+    position: absolute;
+    bottom: 31vh;
+    left: 12vh;
+    font-size: 3vh;
 }
 
 

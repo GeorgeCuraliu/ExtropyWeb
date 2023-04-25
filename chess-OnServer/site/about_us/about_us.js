@@ -6,7 +6,7 @@ let selectedDepartamentClass;
 let lastSelectedDepartamentClass;
 let selectedMembers;
 
-class MemebrsData{
+class MemebrsData{//a class declared to store members from every departament inside
     constructor(departament){
         this.departament = departament
         this.name = [];
@@ -31,22 +31,22 @@ let propagandaData = new MemebrsData("propaganda");
 let buildingData = new MemebrsData("building");
 
 
-window.onload = () => {
+window.onload = () => {//will get all members data
     $.ajax({
         type: "GET",
         url: "http://localhost:1233/chess-OnServer/server/members.json",
         dataType: "json",
         success: function(data) {
-          console.log(data); // do something with the retrieved JSON data
+          console.log(data);
           showData(data);
         },
         error: function(xhr, status, error) {
-          console.error(error); // handle errors
+          console.error(error);
         }
       });
 }
 
-function showData(data){
+function showData(data){//thil will process all the data from the ajax GET and proopcess them in html data, that will be stored in the class
     for(let i = 0; i<Object.keys(data).length; i++){
         let img64 = data[i].image;
         let imgData = atob(img64);
@@ -113,12 +113,12 @@ function searchForEventListeners(){
     members();
 }
 
-function departaments(){
+function departaments(){//will add event listeners to evry departament button
     document.querySelector(`#building`).addEventListener(`click`,() => {selectedDepartamentUpdate("building")});
     document.querySelector(`#programming`).addEventListener(`click`,() => {selectedDepartamentUpdate("programming")});
     document.querySelector(`#propaganda`).addEventListener(`click`,() => {selectedDepartamentUpdate("propaganda")});
 }
-function members(){
+function members(){//will load the curent departament members into the container
     let members_cards = document.querySelectorAll(`#members > div`);
     members_cards.forEach(card => {
         card.addEventListener(`click`, () => {
@@ -133,7 +133,7 @@ function members(){
     });
 }
 
-async function selectedDepartamentUpdate(departament){
+async function selectedDepartamentUpdate(departament){//this function is used for the animations activated when a departament is pressed
     let membersContainer = document.querySelector(`#members`);
     console.log("a");
     if(departament == "building" && selectedDepartamentClass != "building"){
@@ -184,7 +184,7 @@ async function selectedDepartamentUpdate(departament){
     searchForEventListeners();
 }
 
-function showCaseCard(data, departament){
+function showCaseCard(data, departament){//for the little showcase container where is the description too
 
 
       document.querySelector(`body`).innerHTML += `

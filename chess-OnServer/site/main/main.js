@@ -51,7 +51,7 @@ async function eventYears(){//this will create all the years from events and add
     sidePagesEventListeners();
 }
 
-function logOut(){//i have to call this function instead of onclick property because fucking module type(fuck)
+function logOut(){
     let cookieValue = '';
     container = document.querySelector(`#user-name`);
     window.cookieStore.get("credentials").then((cookie) => {
@@ -143,7 +143,7 @@ function eventListenersUpdate(member){//thi will check for divs with event liste
     
 }
 
-function sidePagesEventListeners(){//this will search for squares that are linked to some side pages adn its enough to do this once
+function sidePagesEventListeners(){//this will search for squares that are linked to some side pages and its enough to do this once
     document.querySelector(`#card-0`).addEventListener(`click`, () => {
         window.location.href = `/chess-OnServer/site/about_us/about_us.php`;
     })

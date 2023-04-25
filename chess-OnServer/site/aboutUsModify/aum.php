@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="aum.css">
 </head>
 <body>
-	<div id="members" class="flex">
+	<div id="members" class="flex"><!--this is used as a container to load the members in(they can be deleted from there)-->
 	<div id="programming" class="sections">
 	</div>
 
@@ -22,7 +22,7 @@
 
 
 	<div id="new" class="flex">
-		<div id="new-member" class="new-section flex">
+		<div id="new-member" class="new-section flex"><!--used to create new member-->
 			<div id="img-div" class="flex">
 				<button id="add-img-butt">Add Image</button>
 				<input type="file" id="imageInput" style="position: relative;left:50px;">
@@ -38,10 +38,10 @@
 				</select>
 			</div>
 			<textarea rows="4" cols="50" id="description" placeholder="Description of the one who should not be named or talked about  NOTE: the image must be png"></textarea>
-			<button id="confirm">Confirm new soul sold</button>
+			<button id="confirm">Confirm new member</button>
 			<div id="dataCheck"></div>
 		</div>
-		<div id="new-event" class="new-section flex">
+		<div id="new-event" class="new-section flex"><!--used tio create a new event in a specific json(or create a new json that will used as a new year for events)-->
 			<div id="img-event">
 				<button id="add-img-event-butt">Add Image</button>
 				<input type="file" id="image-inpu-event" style="position: relative;left:50px;">
@@ -49,6 +49,8 @@
 					<img id="new-img-event" src="" alt="">
 				</div>
 				<select name="file" id="event-file-name"></select>
+				<input id="event-name" type="text">
+				<input id="event-date" type="date">
 				<input id="new-json-file-event" type="number" placeholder="format:2019-2020">
 				<button id="createJSONfile">Confirm new JSON events file</button>
 			</div>
@@ -57,7 +59,7 @@
 		</div>
 	</div>
 
-	<div id="recruits-container">
+	<div id="recruits-container"><!--for recruits data and stats-->
 		<div id="recruits"></div>
 		<div id="recruits-data">
 			<div class="data-section">
@@ -70,14 +72,14 @@
 			</div>
 			<br>
 			<div class="data-section">
-				<div class="class" id="programmingR" style="background-color:aquamarine">racists </div>
+				<div class="class" id="programmingR" style="background-color:aquamarine">programming </div>
 				<div class="class" id="buildingR" style="background-color:blue">building </div>
 				<div class="class" id="propagandaR" style="background-color:brown">propaganda </div>
 			</div>
 		</div>
 	</div>
 	<div id="sponsors">
-		<div class="sponsors-section">
+		<div class="sponsors-section"><!--create new sponsor or delete one-->
 			<input type="file" id="image-inpu-sponsor" style="position: relative;left:50px;">
 			<button id="add-img-sponsor-butt">Add Image</button>
 			<button id="confirm-sponsor">Confirm sponsor</button>

@@ -1,9 +1,8 @@
 import {Events} from "/chess-OnServer/site/!modules/eventJSON.js";
 import {JoinUs} from "/chess-OnServer/site/!modules/join_us.js";
-let joinUS = new JoinUs();
+let joinUS = new JoinUs();//import the modules(i have to move all the ajax in to the modules)
 let events = new Events();
-//<section>Name phoneNum calss</section>
-//i shoudl move all the functions that get data to one where all are triggered for once, so i dont have to call them separately(fucking looks better)
+
 
 
 let image;
@@ -15,8 +14,8 @@ let imgS;
 const select = document.getElementById('departaments');
 const dataCheck = document.querySelector(`#dataCheck`);
 
-window.onload = async () => {
-  let recruits = await joinUS.getRecruits();
+window.onload = async () => {//wil get the recruits data and process this for tha stats in the right
+  let recruits = await joinUS.getRecruits();//will get the recruits data
   let classes = {"07":0, "08": 0, "09":0, "10":0, "11":0, "12":0}; //there it will get the number of recruits per every class
   let departamentR = {"programming": 0, "building": 0, "propaganda": 0};
   console.log(recruits);
@@ -50,7 +49,7 @@ async function getSponsors(){
     console.log(events.getSponsors())
     let sponsors = await events.getSponsors();
 
-    for(let i = 0;i < Object.keys(sponsors).length; i++){//whill will add every sponsor png to a card from where we can delete what we need
+    for(let i = 0;i < Object.keys(sponsors).length; i++){// will add every sponsor png to a card from where we can delete what we need
       console.log(sponsors[i].png)
       document.querySelector(`#sponsors-section-2`).innerHTML += `
       <div class="card-sponsor">
@@ -78,7 +77,7 @@ selectedJSONfile = loadEventsFiles();//whill will set default option for files a
 
 function newImage(){
   var fileInput = document.getElementById("imageInput");//from the input block stores the image
-  var file = fileInput.files[0];//iw will store the img in a var, not array
+  var file = fileInput.files[0];//it will store the img in a var, not array
   if(file){
     var reader = new FileReader();
       reader.readAsDataURL(file);
@@ -123,13 +122,13 @@ function sendData(){//send new member to the server
   eventListenerForButtons();
 }
 
-function getData(){
+function getData(){//will get the json file with all the members and will call showData to process this json
   $.ajax({
     type: "GET",
     url: "http://localhost:1233/chess-OnServer/server/members.json",
     dataType: "json",
     success: function(data) {
-      console.log(data); // do something with the retrieved JSON data
+      console.log(data);
       showData(data);
     },
     error: function(xhr, status, error) {
@@ -141,9 +140,6 @@ function getData(){
 getData();
 
 function showData(data){
-  // const val1 = data[0].name;
-  // console.log(val1);
-  // console.log(Object.keys(data).length);//this will get the length of json
   for(let i = 0; i < Object.keys(data).length; i++){
 
     let img64 = data[i].image;
@@ -178,7 +174,7 @@ function showData(data){
       destionationOfCard = "building";
     }
 
-    let containerOfcard = document.querySelector(`#${destionationOfCard}`);
+    let containerOfcard = document.querySelector(`#${destionationOfCard}`);//will create members cards with the specific data of each one
     containerOfcard.innerHTML +=`
     <div class="card flex">
 			<img src="${imgUrl}" class="img">
@@ -193,7 +189,7 @@ function showData(data){
 
 }
 
-function searchForDeleteButtons(){
+function searchForDeleteButtons(){//this will send the data from a card that was selected to be deleted to the server
   const delBut = document.querySelectorAll(`.delete-button`);
   delBut.forEach(element => {
     element.addEventListener(`click`, () => {
@@ -231,14 +227,17 @@ function newImageEvent(){
 
 function sendDataEvent(){//send new member to the server
   let descriptionE = document.querySelector(`#announcement`).value;//gets the description and name values
+  let nameE = document.querySelector(`#event-name`).value;
+  let dateE = document.querySelector(`#event-date`).value;
+  console.log(nameE)
   console.log("Aa");
-  if(imageE && descriptionE){
+  if(imageE && descriptionE && nameE && dateE){
     console.log(selectedJSONfile);
 
   $.ajax({
       type:"POST",
       url: "http://localhost:1233/chess-OnServer/server/createEvent.php",
-      data: {image: imageE.src, description: descriptionE, file: selectedJSONfile},
+      data: {image: imageE.src, description: descriptionE, file: selectedJSONfile, name: nameE, date: dateE},
       success: function(response, status, xhr){
         console.log(response);
       },
@@ -248,12 +247,11 @@ function sendDataEvent(){//send new member to the server
 
 
   }else{
-    //dataCheck.innerHTML = "check the data, something is missing";
   }
   eventListenerForButtons();
 }
 
-function createNewJSONfile(){
+function createNewJSONfile(){//will create a new json file that will be used as a a storage for a year of events
   let JSONname = document.getElementById(`new-json-file-event`).value;
   if(JSONname){
     JSONname += `.json`;
@@ -296,14 +294,14 @@ function senSponsor(){
   events.sendSponsorPng(imgS);
 }
 
-function eventListenerForButtons(){//this fucking function will fucking what fucking onclick should do but fucking module is fucked so now i have to add fucking event listeners(nice)
+function eventListenerForButtons(){//will "search" for event listeners
   document.querySelector(`#add-img-butt`).addEventListener(`click`,newImage)
   document.querySelector(`#confirm`).addEventListener(`click`,sendData)
   document.querySelector(`#add-img-event-butt`).addEventListener(`click`,newImageEvent)
   document.querySelector(`#createJSONfile`).addEventListener(`click`,createNewJSONfile)
   document.querySelector(`#cofirm-event`).addEventListener(`click`,sendDataEvent)
   document.querySelector(`#add-img-sponsor-butt`).addEventListener(`click`,newImageSponsor)
-  document.querySelector(`#confirm-sponsor`).addEventListener(`click`, senSponsor)//this fucking function have to be decalred as anonymous to dont get fucking triggered fucking twice
+  document.querySelector(`#confirm-sponsor`).addEventListener(`click`, senSponsor)
   document.querySelector(`#event-file-name`).addEventListener(`change`, (event) => {//the change prob dont get triggered twice(nice)
     console.log(event.target.value);
     selectedJSONfile = event.target.value;

@@ -1,6 +1,6 @@
 
 
-function logIn(){
+function logIn(){//will collect the data for log in and check at the server
     var name = document.getElementById("name").value;
     var password = document.getElementById("password").value;
 
@@ -26,7 +26,7 @@ function logIn(){
     });
 }
 
-function newUser(){
+function newUser(){//this will check if the var ar not empty and send the data to server to create enw user if the name is free 
     var name = document.getElementById("name").value;
     var password0 = document.getElementById("password0").value;
     var password1 = document.getElementById("password1").value;
@@ -76,7 +76,7 @@ let flipVal= true;//this will toggle betwen log in and create account
 let flipDiv = document.querySelector(`#elements`);
 let flipButton = document.querySelector(`#flip-button`);
 
-function flip(){
+function flip(){//will create the animation when is selcted log in or create new account
     flipButton = document.querySelector(`#flip-button`);
 
 
@@ -101,7 +101,7 @@ flipButton.addEventListener(`click`, () => {
 
 }
 
-function changeElements(){
+function changeElements(){//will change the innerHTML of the container when the angle is 90 so it creates a little ilusion
     console.log(`test 4`);
     flipVal = !flipVal;
     if(flipVal){

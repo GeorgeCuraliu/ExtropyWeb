@@ -19,7 +19,7 @@
         <img id="text-container" src="/chess-OnServer/site/!sources/img_svg/place_for_text_about_us.svg" alt="">
         <p></p>
 
-        <div id="departaments-container">
+        <div id="departaments-container"><!--this is the departaments logo container-->
             <div class="departament" id="building">
                 <img class="departament-img" src="/chess-OnServer/site/!sources/img_svg/building_logo.svg" alt="">
                 <p class="departament-name">Building</p>
@@ -35,7 +35,7 @@
             </div>
         </div>
 
-        <div id="members">
+        <div id="members"><!--this is the container that will be filled with specific members from every departament-->
             <div class="card">
                 <img class="frame-svg" src="/chess-OnServer/site/!sources/img_svg/picture_frame.svg" alt="">
                 <img class="member-picture" src="/chess-OnServer/site/!sources/Screenshot 2023-04-08 155718.png" alt="">

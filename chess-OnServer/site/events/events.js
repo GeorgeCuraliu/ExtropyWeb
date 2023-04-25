@@ -5,7 +5,7 @@ let events = new Events();
 
 
 
-window.onload = async function(){
+window.onload = async function(){//will get the events data from the specific json file trought the url parameters
     const searchParams = new URLSearchParams(window.location.search);
     const year = searchParams.get('year');
     document.getElementById(`years`).innerHTML = year;
@@ -35,8 +35,10 @@ window.onload = async function(){
         <div class="event">
             <div class="description-container">
                 <p>${eventsData[i].description}</p>
+                <p class="name" >${eventsData[i].name}</p>
+                <p class="date">${eventsData[i].date}</p>
             </div>
-            <img class="image-container" src="${imgUrl}" alt="">
+            <img class="image-container" src="" alt="">
         </div>
         `;
 
@@ -46,7 +48,6 @@ window.onload = async function(){
             event.querySelector(`.description-container`).classList.add(`description-container-reverse`);
             event.querySelector(`.image-container`).classList.add("image-reverse");
         }
-//style.right = "5vw"
         reverseEvent = !reverseEvent;
     }
     
