@@ -1,7 +1,41 @@
 import {Events} from "/chess-OnServer/site/!modules/eventJSON.js";
-
-
 let events = new Events();
+
+
+
+let sponsors;
+
+async function getSponsors(){
+    sponsors = await events.getSponsors()//this will get all sponsors png
+    let i;
+    for(i = 0; i < Object.keys(sponsors).length; i++){
+        console.log("sponsor")
+        document.querySelector("#card-3").innerHTML += `<img class="sponsor-png" src="${sponsors[i].png}" alt=""></img>`
+    }
+    document.querySelectorAll(`.sponsor-png`).forEach(element => {
+        element.style.animationDuration = `${i * 4}s`;//this will set the duration time for this animation
+    })
+
+    // Find the style sheet that contains the @keyframes rule(this will gett al stylesheets ans select just the first one)
+    const styleSheet = document.styleSheets[0];
+    console.log(styleSheet)
+
+    // Find the @keyframes rule called sponsors
+    const keyframesRule = Array.from(styleSheet.cssRules).find(
+        rule => rule.type === CSSRule.KEYFRAMES_RULE && rule.name === "sponsors"
+    );
+    console.log(keyframesRule);
+
+    // Modify the transform property of the 100% keyframe
+    keyframesRule.deleteRule("100%");
+    keyframesRule.appendRule(`100% { transform: translateX(${(i+1) * 30}%); }`);
+
+    keyframesRule.deleteRule("0%");
+    keyframesRule.appendRule(`0% { transform: translateX(-${(i+1) * 80}%); }`);
+
+}
+getSponsors();
+
 async function eventYears(){//this will create all the years from events and add event listener to each one(+href)
     let eventYears = await events.getNamesOfEventsJSON();
     console.log(eventYears);
@@ -117,5 +151,6 @@ function sidePagesEventListeners(){//this will search for squares that are linke
         window.location.href = `/chess-OnServer/site/join_us/join_us.php`
     })
 }
+
 
 

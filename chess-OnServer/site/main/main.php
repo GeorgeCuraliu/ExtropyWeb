@@ -46,7 +46,7 @@
                     </div>
                     <div class="card-container" id="cc-3">
                         <div class="card" id="card-3" >
-                            <p>Sponsors</p>
+                            <p id="sponsors-p">Sponsors</p>
                         </div>
                     </div>
                 </div>
