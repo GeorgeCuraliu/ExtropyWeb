@@ -67,7 +67,7 @@
 
                 <div class="card-container" id="cr-1">
                     <div class="card">
-                        <p class="card-title">US</p>
+                        <p class="card-title">CONTACT US</p>
                     </div>
                 </div>
             </div>

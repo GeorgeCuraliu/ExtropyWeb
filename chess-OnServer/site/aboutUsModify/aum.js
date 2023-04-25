@@ -294,6 +294,11 @@ function senSponsor(){
   events.sendSponsorPng(imgS);
 }
 
+function deleteRecruits(){
+  console.log("delete recruits");
+  events.deleteRecruits();
+}
+
 function eventListenerForButtons(){//will "search" for event listeners
   document.querySelector(`#add-img-butt`).addEventListener(`click`,newImage)
   document.querySelector(`#confirm`).addEventListener(`click`,sendData)
@@ -302,6 +307,7 @@ function eventListenerForButtons(){//will "search" for event listeners
   document.querySelector(`#cofirm-event`).addEventListener(`click`,sendDataEvent)
   document.querySelector(`#add-img-sponsor-butt`).addEventListener(`click`,newImageSponsor)
   document.querySelector(`#confirm-sponsor`).addEventListener(`click`, senSponsor)
+  document.querySelector(`#delete-recruits`).addEventListener(`click`, deleteRecruits)
   document.querySelector(`#event-file-name`).addEventListener(`change`, (event) => {//the change prob dont get triggered twice(nice)
     console.log(event.target.value);
     selectedJSONfile = event.target.value;

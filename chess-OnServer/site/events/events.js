@@ -43,7 +43,7 @@ window.onload = async function(){//will get the events data from the specific js
         </div>
         `;
 
-        if(reverseEvent){//this will reverse the event if the last one want reversed
+        if(reverseEvent){//this will reverse the event if the last one wasnt reversed
             let event = document.querySelector(`#events-container > .event:last-child`);
             event.classList.add(`event-reverse`);
             event.querySelector(`.description-container`).classList.add(`description-container-reverse`);

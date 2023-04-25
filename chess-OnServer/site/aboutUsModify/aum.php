@@ -60,7 +60,7 @@
 	</div>
 
 	<div id="recruits-container"><!--for recruits data and stats-->
-		<div id="recruits"></div>
+		<div id="recruits"><button id="delete-recruits">Delete the data for recruits</button></div>
 		<div id="recruits-data">
 			<div class="data-section">
 				<div class="class" id="7" style="background-color:aquamarine">class 7 </div>

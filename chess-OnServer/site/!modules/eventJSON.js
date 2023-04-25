@@ -64,4 +64,17 @@ deleteSponsor(index){
     }
   });
 }
+deleteRecruits(){
+  $.ajax({
+    type:"POST",
+    url: "http://localhost:1233/chess-OnServer/server/deleteRecruits.php",
+    data: {delete: "confirm"},
+    success: function(response, status, xhr){
+      console.log(response);
+    },
+    error: function(response, status, xhr){
+
+    }
+  })
+}
 }
