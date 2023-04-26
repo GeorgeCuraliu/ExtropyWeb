@@ -5,6 +5,9 @@ let selectedDepartament;
 let selectedDepartamentClass;
 let lastSelectedDepartamentClass;
 let selectedMembers;
+let membersContainer = document.querySelector(`#members`);
+
+
 
 class MemebrsData{//a class declared to store members from every departament inside
     constructor(departament){
@@ -134,34 +137,18 @@ function members(){//will load the curent departament members into the container
 }
 
 async function selectedDepartamentUpdate(departament){//this function is used for the animations activated when a departament is pressed
-    let membersContainer = document.querySelector(`#members`);
     console.log("a");
-    if(departament == "building" && selectedDepartamentClass != "building"){
-
-        selectedDepartament = buildingData;
-        selectedMembers = buildingMembers;
-        console.log(`not building`);
-        lastSelectedDepartamentClass = selectedDepartamentClass;
-        selectedDepartamentClass = "building";
-        
     
-    }else if(departament == "propaganda" && selectedDepartamentClass != "propaganda"){
-        
-        selectedDepartament = propagandaData;
-        selectedMembers = propagandaMembers;
-        console.log(`classiefied`);
-        lastSelectedDepartamentClass = selectedDepartamentClass;
-        selectedDepartamentClass = "propaganda";
-        
-        
-    }else if(selectedDepartamentClass != "programming"){
-        selectedDepartament = programmingData;
-        selectedMembers = programmingMembers;
-        console.log(`programming`);
-        lastSelectedDepartamentClass = selectedDepartamentClass;
-        selectedDepartamentClass = "programming";
-            
+    const deparatamentsTempObj = {//the object must be here, so the variables are not empty
+        "building": [buildingData, buildingMembers, "building"],
+        "propaganda": [propagandaData, propagandaMembers, "propaganda"],
+        "programming": [programmingData, programmingMembers, "programming"]
     }
+
+    selectedDepartament = deparatamentsTempObj[departament][0];
+    selectedMembers = deparatamentsTempObj[departament][1];
+    console.log(deparatamentsTempObj[departament][2]);
+    selectedDepartamentClass = deparatamentsTempObj[departament][2];
 
     if(document.querySelector(`.deselected-departament`)){
         document.querySelector(`.deselected-departament`).classList.remove(`deselected-departament`);
@@ -173,7 +160,7 @@ async function selectedDepartamentUpdate(departament){//this function is used fo
     document.querySelector(`#${selectedDepartamentClass}`).classList.add(`selected-departament`);
     
     
-    membersContainer.innerHTML = "";
+    membersContainer.innerHTML = "";//this will add every card with a member inside it and will get a "pause" of 400ms for the animation to finsih
     for(let i = 0; i < selectedMembers.length; i++){
         membersContainer.innerHTML += selectedMembers[i];
         await new Promise(resolve => setTimeout(resolve, 400));
