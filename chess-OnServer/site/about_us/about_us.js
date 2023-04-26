@@ -157,7 +157,7 @@ async function selectedDepartamentUpdate(departament){//this function is used fo
     }else if(selectedDepartamentClass != "programming"){
         selectedDepartament = programmingData;
         selectedMembers = programmingMembers;
-        console.log(`fucking programming`);
+        console.log(`programming`);
         lastSelectedDepartamentClass = selectedDepartamentClass;
         selectedDepartamentClass = "programming";
             

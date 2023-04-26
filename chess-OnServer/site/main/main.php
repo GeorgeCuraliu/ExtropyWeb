@@ -44,8 +44,8 @@
                             <p class="card-title">GAMES</p>
                         </div>
                     </div>
-                    <div class="card-container" id="cc-3">
-                        <div class="card" id="card-3" >
+                    <div id="cc-3">
+                        <div id="card-3" >
                             <p id="sponsors-p">Sponsors</p>
                         </div>
                     </div>
