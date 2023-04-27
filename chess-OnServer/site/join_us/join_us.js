@@ -1,5 +1,5 @@
-import {JoinUs} from "/chess-OnServer/site/!modules/join_us.js"
-let joinUs = new JoinUs();
+import {Events} from "/chess-OnServer/site/!modules/eventJSON.js"
+let events = new Events();
 
 
 let departament;
@@ -24,7 +24,7 @@ document.querySelector(`footer p`).addEventListener(`click`, () => {//will verif
     let classPD = document.querySelector(`#classPD`).value;
     let number = document.querySelector(`#number`).value;
     if(name && reason && classPD && number && departament){
-        joinUs.sendData(name, reason, classPD, number, departament);
+        events.sendData(name, reason, classPD, number, departament);
     }
 })
 

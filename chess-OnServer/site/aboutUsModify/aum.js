@@ -1,7 +1,6 @@
 import {Events} from "/chess-OnServer/site/!modules/eventJSON.js";
-import {JoinUs} from "/chess-OnServer/site/!modules/join_us.js";
-let joinUS = new JoinUs();//import the modules(i have to move all the ajax in to the modules)
-let events = new Events();
+let events = new Events();//import the modules(i have to move all the ajax in to the modules)
+
 
 
 
@@ -15,7 +14,7 @@ const select = document.getElementById('departaments');
 const dataCheck = document.querySelector(`#dataCheck`);
 
 window.onload = async () => {//wil get the recruits data and process this for tha stats in the right
-  let recruits = await joinUS.getRecruits();//will get the recruits data
+  let recruits = await events.getRecruits();//will get the recruits data
   let classes = {"07":0, "08": 0, "09":0, "10":0, "11":0, "12":0}; //there it will get the number of recruits per every class
   let departamentR = {"programming": 0, "building": 0, "propaganda": 0};
   console.log(recruits);
