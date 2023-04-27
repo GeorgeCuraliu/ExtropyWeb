@@ -4,6 +4,6 @@
         "password": "MrBlec-admin",
         "chessMatchesWon": 0,
         "ticTacToeMatchesWon": 0,
-        "extropy": true
-    }  
+        "extropy": "true"
+    }
 }

@@ -4,7 +4,7 @@
 	<title>Main</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="main.css">
-</head><!--for log in, so you can acces the member exclusive pages is MrBlec and password MrBlec-admin-->
+</head><!--for log in, so you can acces the member exclusive pages is MrBlec and password MrBlec-admin   -->
     <body onload="tryCredentials()">
         <div id="page-container">
             <div id="left-section" class="section">

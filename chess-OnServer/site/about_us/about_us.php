@@ -44,12 +44,9 @@
                     <p class="member-name">Name</p>
                 </div>
             </div>
-
-               
-
         </div>
-    </div>
 
-    <script src="about_us.js"></script>
+
+    <script src="about_us.js" type="module"></script>
 </body>
 </html>

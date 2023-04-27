@@ -89,6 +89,16 @@
 		</div>
 		<div class="sponsors-section" id="sponsors-section-2"></div>
 	</div>
+
+	<div id="modify-account-type"><!--this will be used for modifing the type of an account(user, member, or something else)-->
+            <input class="account-interaction" id="account-user" placeholder="There you set an account as user" type="text">
+            <button class="account-interaction" id="confirm-account-user">Confirm account user</button>
+            <input class="account-interaction" id="account-member" placeholder="There you set an account as member" type="text">
+            <button class="account-interaction" id="confirm-account-member">Confirm account member</button>
+			<p class="account-interaction" id="response-paragraph-account"></p>
+        </div>
+    </div>
+
 	<script src="aum.js" type="module"></script>
 </body >
 </html>

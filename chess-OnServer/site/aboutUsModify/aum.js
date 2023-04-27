@@ -298,7 +298,16 @@ function deleteRecruits(){
   console.log("delete recruits");
   events.deleteRecruits();
 }
-
+async function accountUser(){
+  console.log(document.querySelector(`#account-user`).value, false)
+  let reponse = await events.accountType(document.querySelector(`#account-user`).value, false);//will get the response from the server and siaply in paragraph
+  document.querySelector(`#response-paragraph-account`).innerHTML = reponse
+}
+async function accountMember(){
+  console.log(document.querySelector(`#account-user`).value, false)
+  let reponse = await events.accountType(document.querySelector(`#account-member`).value, true);
+  document.querySelector(`#response-paragraph-account`).innerHTML = reponse
+}
 function eventListenerForButtons(){//will "search" for event listeners
   document.querySelector(`#add-img-butt`).addEventListener(`click`,newImage)
   document.querySelector(`#confirm`).addEventListener(`click`,sendData)
@@ -319,6 +328,8 @@ function eventListenerForButtons(){//will "search" for event listeners
       events.deleteSponsor(index)
     })
   })
+  document.querySelector(`#confirm-account-user`).addEventListener(`click`, accountUser);//this 2 event listeners will call a function that, trought module, will send to the server the name of the user and will change its type of account, so new members will be "members" in my db too
+  document.querySelector(`#confirm-account-member`).addEventListener(`click`, accountMember);//i have to call another function for this so the anaonymous dont repeat twice
 }
 
 

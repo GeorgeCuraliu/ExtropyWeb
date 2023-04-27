@@ -98,4 +98,18 @@ async getRecruits(){
   })
   return recruits;
 }
+async accountType(user, type){
+  let responseReturn = await $.ajax({
+    type:"POST",
+    url: "http://localhost:1233/chess-OnServer/server/accountType.php",
+    data: {user: user, type: type},
+    success: function(response, status, xhr){
+      console.log(response);
+    },
+    error: function(response, status, xhr){
+
+    }
+  });
+  return responseReturn;
+}
 }
