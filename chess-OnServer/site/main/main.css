@@ -142,7 +142,7 @@
         height: 100%;
         width: 100%;
         background-color: var(--white);
-        border-radius: 50px;
+        border-radius: 2vw;
         display: flex;
         flex-direction: column;
         z-index: 20;
@@ -232,7 +232,7 @@
     #JOIN-US-p{
         align-self: center;
         color: var(--neonPink);
-        font-size: 3vh;
+        font-size: 1.7vw;
         position: relative;
         left: 5px;
         cursor: pointer;

@@ -1,3 +1,25 @@
+import {Events} from "/chess-OnServer/site/!modules/eventJSON.js";
+let events = new Events();//import the modules(i have to move all the ajax in to the modules)
+
+//i will check the credentials to verify that the person who is accessing this page is admin
+window.onload = async () => {
+  var cookie = document.cookie;
+if(cookie){
+  var getVal = cookie.split("=");
+  var credentials = getVal[1].split(" ");
+  var name = credentials[0];
+  var password = credentials[1];
+  let response = await events.logIn(name, password);
+  if(response.trim() === 'true' || response.trim() === 'member') {
+      console.log(`Hi ${name}, welcome back`)
+  } else {
+      window.location.href = `/chess-OnServer/site/main/main.php`
+  }
+} else {
+  window.location.href = `/chess-OnServer/site/main/main.php`
+}
+}
+
 var value_title_idea;
 var value_text_idea;
 
@@ -116,19 +138,7 @@ function search_for_left_arrow(){
   })
 }
 
-function send_data(type){
-  $.ajax({
-    type: "POST",
-    url: "http://localhost:1233/chess-OnServer/server/log_in.php",
-    data: { type: type, title: text, from: from, to: to},
-    success: function(response, status, xhr) {
-        console.log(response);
-    },
-    error: function(xhr, status, error) {
-        
-    }
-});
-}
+
 
 
 

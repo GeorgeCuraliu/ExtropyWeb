@@ -13,6 +13,24 @@ let imgS;
 const select = document.getElementById('departaments');
 const dataCheck = document.querySelector(`#dataCheck`);
 
+//i will check the credentials to verify that the person who is accessing this page is admin
+var cookie = document.cookie;
+if(cookie){
+  var getVal = cookie.split("=");
+  var credentials = getVal[1].split(" ");
+  var name = credentials[0];
+  var password = credentials[1];
+  let response = await events.logIn(name, password);
+  if(response.trim() === 'true' || response.trim() === 'member') {
+      console.log(`Hi ${name}, welcome back`)
+  } else {
+      window.location.href = `/chess-OnServer/site/main/main.php`
+  }
+} else {
+  window.location.href = `/chess-OnServer/site/main/main.php`
+}
+
+
 window.onload = async () => {//wil get the recruits data and process this for tha stats in the right
   let recruits = await events.getRecruits();//will get the recruits data
   let classes = {"07":0, "08": 0, "09":0, "10":0, "11":0, "12":0}; //there it will get the number of recruits per every class

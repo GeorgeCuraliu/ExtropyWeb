@@ -56,6 +56,6 @@
         
       </div>  
       
-      <script src="schedule.js"></script>
+      <script src="schedule.js" type="module"></script>
  </body>
 </html>
