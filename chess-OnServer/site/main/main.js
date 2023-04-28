@@ -64,15 +64,15 @@ function logOut(){
         }
       });
       //remove the pages that can be accesed just by the members
-    document.querySelector(`#tasks`).remove();
-    document.querySelector(`#addMembersAboutUs`).remove();
+      if(document.querySelector(`#tasks`)){document.querySelector(`#tasks`).remove();}
+      if(document.querySelector(`#addMembersAboutUs`)){document.querySelector(`#addMembersAboutUs`).remove();}
     container.innerHTML = 'Guest';
     document.querySelector(`#log-out`).remove();
     accountPage();//will add event listener to the container of name
 }
 
 let container = document.querySelector(`#user-name`);
-window.onload = function(){//checking if there is a cookie and if the cookie values are correct
+window.onload =async function(){//checking if there is a cookie and if the cookie values are correct
     eventYears();
     var cookie = document.cookie;
     container = document.querySelector(`#user-name`);
@@ -81,33 +81,23 @@ window.onload = function(){//checking if there is a cookie and if the cookie val
         var credentials = getVal[1].split(" ");
         var name = credentials[0];
         var password = credentials[1];
-        $.ajax({
-            type: "POST",
-            url: "http://localhost:1233/chess-OnServer/server/log_in.php",
-            data: { name: name, password: password},
-            success: function(response, status, xhr) {
-                console.log(response);
-                if (response.trim() === 'true') {
-                    container.innerHTML = `${name}`;
-                    document.querySelector(`#left-section-1`).innerHTML += `<p id="log-out">Log out</p>`;
-                    const member = false;
-                    eventListenersUpdate(member);
-                }else if(response.trim() === 'member'){
-                    container.innerHTML = `${name}`;
-                    document.querySelector(`#left-section-1`).innerHTML += `
-                    <p id="log-out">Log out</p>
-                    <div class="memberDiv" id="tasks">Tasks</div>
-                    <div class="memberDiv" id="addMembersAboutUs">Modify about us</div>`;
-                    const member = true;
-                    eventListenersUpdate(member);
-                } else {
-                    container.innerHTML = 'Guest';
-                }
-            },
-            error: function(xhr, status, error) {
-                console.error(error, status);
-            }
-        });
+        let response = await events.logIn(name, password);
+        if(response.trim() === 'true') {
+            container.innerHTML = `${name}`;
+            document.querySelector(`#left-section-1`).innerHTML += `<p id="log-out">Log out</p>`;
+            const member = false;
+            eventListenersUpdate(member);
+        }else if(response.trim() === 'member'){
+            container.innerHTML = `${name}`;
+            document.querySelector(`#left-section-1`).innerHTML += `
+            <p id="log-out">Log out</p>
+            <div class="memberDiv" id="tasks">Tasks</div>
+            <div class="memberDiv" id="addMembersAboutUs">Modify about us</div>`;
+            const member = true;
+            eventListenersUpdate(member);
+        } else {
+            container.innerHTML = 'Guest';
+        }
     }else{
         container.innerHTML += 'Guest';
     }

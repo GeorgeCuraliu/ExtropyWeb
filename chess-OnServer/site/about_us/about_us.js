@@ -1,9 +1,11 @@
+import {Events} from "/chess-OnServer/site/!modules/eventJSON.js";
+let events = new Events();//import the modules(i have to move all the ajax in to the modules)
+
 let propagandaMembers = [];
 let programmingMembers = [];
 let buildingMembers = [];
 let selectedDepartament;
 let selectedDepartamentClass;
-let lastSelectedDepartamentClass;
 let selectedMembers;
 let membersContainer = document.querySelector(`#members`);
 
@@ -33,21 +35,10 @@ let programmingData = new MemebrsData("programming");
 let propagandaData = new MemebrsData("propaganda");
 let buildingData = new MemebrsData("building");
 
-
-window.onload = () => {//will get all members data
-    $.ajax({
-        type: "GET",
-        url: "http://localhost:1233/chess-OnServer/server/members.json",
-        dataType: "json",
-        success: function(data) {
-          console.log(data);
-          showData(data);
-        },
-        error: function(xhr, status, error) {
-          console.error(error);
-        }
-      });
+window.onload = async () => {//will get all members data
+    showData(await events.getMembersJSON());
 }
+
 
 function showData(data){//thil will process all the data from the ajax GET and proopcess them in html data, that will be stored in the class
     for(let i = 0; i<Object.keys(data).length; i++){

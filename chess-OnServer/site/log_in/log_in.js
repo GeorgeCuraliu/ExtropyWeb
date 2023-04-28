@@ -1,16 +1,17 @@
+import {Events} from "/chess-OnServer/site/!modules/eventJSON.js";
+let events = new Events();//import the modules(i have to move all the ajax in to the modules)
+
+let flipVal= true;//this will toggle betwen log in and create account
+let flipDiv = document.querySelector(`#elements`);
+let flipButton = document.querySelector(`#flip-button`);
 
 
-function logIn(){//will collect the data for log in and check at the server
+async function logIn(){//will collect the data for log in and check at the server
     var name = document.getElementById("name").value;
     var password = document.getElementById("password").value;
+    
+    let response = await events.logIn(name, password);
 
-
-    $.ajax({
-        type: "POST",
-        url: "http://localhost:1233/chess-OnServer/server/log_in.php",
-        data: { name: name, password: password},
-        success: function(response, status, xhr) {
-            console.log(response);
             if (response.trim() === 'true' || response.trim() === 'member') {
                 container.innerHTML = '<h2>Username and  password are correct</h2>';
                 document.cookie = `credentials=${name} ${password}; path=/`;
@@ -18,12 +19,7 @@ function logIn(){//will collect the data for log in and check at the server
             } else {
                 container.innerHTML = '<h2>Username or password are wrong</h2>';
             }
-        },
-        error: function(xhr, status, error) {
-            console.error(error, status);
-            container.html('<h2>Username already used</h2>');
-        }
-    });
+        
 }
 
 function newUser(){//this will check if the var ar not empty and send the data to server to create enw user if the name is free 
@@ -57,7 +53,7 @@ function newUser(){//this will check if the var ar not empty and send the data t
 
 
     }else{
-        console.log("adawd");
+        console.log("something wrong at user info");
         if(!(password0 == password1)){
             container.innerHTML = "<h2>Passwords are not the same</h2>"
         }
@@ -72,9 +68,6 @@ function newUser(){//this will check if the var ar not empty and send the data t
 
 
 
-let flipVal= true;//this will toggle betwen log in and create account
-let flipDiv = document.querySelector(`#elements`);
-let flipButton = document.querySelector(`#flip-button`);
 
 function flip(){//will create the animation when is selcted log in or create new account
     flipButton = document.querySelector(`#flip-button`);
@@ -119,13 +112,14 @@ function changeElements(){//will change the innerHTML of the container when the 
             <input type="text" id="password0" placeholder="PASSWORD:" class="input">
             <input type="text" id="password1" placeholder="REPEAT PASSWORD:" class="input">
             <div id="container"></div>
-            <button onclick="newUser()" class="button">Create new user</button>
+            <button id="new-user-b" class="button">Create new user</button>
             <button id="flip-button" class="button">Already have an account? Log in!</button>
             `;
         
     }
     flip();
     console.log(flipVal);
+    addEventListeners();
 }
 function reverseDiv(){
     let elements = flipDiv.querySelectorAll(`*`);
@@ -139,5 +133,10 @@ function reverseDiv(){
     },1000);
 }
 
+function addEventListeners(){//will add event listeners to the log in and create user buttons
+    if(document.querySelector(`#log_in`)){document.querySelector(`#log_in`).addEventListener(`click`, logIn);}
+    if(document.querySelector(`#new-user-b`)){document.querySelector(`#new-user-b`).addEventListener(`click`, newUser);}
+}
 
+addEventListeners();
 window.onload = flip();

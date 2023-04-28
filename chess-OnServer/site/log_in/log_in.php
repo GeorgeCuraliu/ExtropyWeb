@@ -19,7 +19,7 @@
                         <input type="text" id="name" placeholder="NAME:" class="input">
                         <input type="text" id="password" placeholder="PASSWORD:" class="input">
                         <div id="container"></div>
-                        <button onclick="logIn()" class="button" id="log_in">Log in</button>
+                        <button class="button" id="log_in">Log in</button>
                         <button id="flip-button" class="button">Do not have an account? Create an user!</button>
                     </div>
                 </div>
@@ -28,6 +28,6 @@
             </div>
 
         </div>
-        <script src="log_in.js"></script>
+        <script src="log_in.js" type="module"></script>
     </body>
 </html>

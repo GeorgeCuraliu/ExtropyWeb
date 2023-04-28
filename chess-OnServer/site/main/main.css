@@ -81,7 +81,7 @@
         border-top:5px solid;
         border-left: 10px solid;
         border-color: rgba(255, 255, 255, 0);
-        font-size: x-large;
+        font-size: 2vw;
         cursor: pointer;
     }
     #big-extropy{
@@ -92,8 +92,8 @@
         position: relative;
     }
     #extropy-guy{
-        width: 90px;
-        height: 90px;
+        width: 6vw;
+        height: 7vw;
         position: relative;
         left: 10px;
     }
@@ -260,11 +260,12 @@
     }
     #log-out{
         position: absolute;
-        top: 130px;
+        top: 10vw;
         left: 10px;
         color: var(--neonPink);
         cursor: pointer;
         z-index: 1000;
+        font-size: 1.3vw;
     }
     .memberDiv{
         position: absolute;

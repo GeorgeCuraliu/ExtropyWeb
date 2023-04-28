@@ -102,7 +102,7 @@ function sendData(){//send new member to the server
     dataCheck.innerHTML = "everything fine";
 
 
-  $.ajax({
+  $.ajax({//this ajax will remain here(will only be used here 100%)
       type:"POST",
       url: "http://localhost:1233/chess-OnServer/server/createMember.php",
       data: {image: image.src, description: description, name: Name, selectedValue: selectedValue},
@@ -121,20 +121,8 @@ function sendData(){//send new member to the server
   eventListenerForButtons();
 }
 
-function getData(){//will get the json file with all the members and will call showData to process this json
-  $.ajax({
-    type: "GET",
-    url: "http://localhost:1233/chess-OnServer/server/members.json",
-    dataType: "json",
-    success: function(data) {
-      console.log(data);
-      showData(data);
-    },
-    error: function(xhr, status, error) {
-      console.error(error);
-    }
-  });
-  eventListenerForButtons();
+async function getData(){//will get the json file with all the members and will call showData to process this json
+  showData(await events.getMembersJSON());
 }
 getData();
 

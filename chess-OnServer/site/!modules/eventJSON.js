@@ -112,4 +112,33 @@ async accountType(user, type){
   });
   return responseReturn;
 }
+async getMembersJSON(){
+  let mem = await $.ajax({
+    type: "GET",
+    url: "http://localhost:1233/chess-OnServer/server/members.json",
+    dataType: "json",
+    success: function(data) {
+      console.log(data);
+    },
+    error: function(xhr, status, error) {
+      console.error(error);
+    }
+  });
+  return mem;
+}
+async logIn(name, password){
+  let res = await $.ajax({
+    type: "POST",
+    url: "http://localhost:1233/chess-OnServer/server/log_in.php",
+    data: { name: name, password: password},
+    success: function(response, status, xhr) {
+        console.log(response);
+    },
+    error: function(xhr, status, error) {
+        console.error(error, status);
+    }
+});
+
+return res;
+}
 }

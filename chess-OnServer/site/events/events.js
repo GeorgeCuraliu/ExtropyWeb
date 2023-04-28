@@ -53,7 +53,7 @@ window.onload = async function(){//will get the events data from the specific js
         }
         reverseEvent = !reverseEvent;
     }
-    const body = document.body;
+    const body = document.body;//is used to arrange the height of body so everything fits and si not directly touching the bottom
     const bodyHeight = body.offsetHeight;
     const windowHeight = window.innerHeight;
     const finalHeight = bodyHeight + windowHeight * 0.3;
