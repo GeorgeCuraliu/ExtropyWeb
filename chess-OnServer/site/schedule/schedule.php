@@ -12,7 +12,7 @@
         <div id="ideas" class="sections">
             <h2 class="section-title">Ideas</h2>
             <div id="cards-ideas" class="card-container">
-                
+
             </div>
             <div id="card-add-ideas" class="card-add" >
                 <button id="card-add-button-ideas" class="card-add-button">+ add element</button>

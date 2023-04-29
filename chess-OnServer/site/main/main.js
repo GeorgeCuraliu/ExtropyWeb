@@ -140,6 +140,9 @@ function sidePagesEventListeners(){//this will search for squares that are linke
     document.querySelector(`#JOIN-US-p`).addEventListener(`click`, () => {
         window.location.href = `/chess-OnServer/site/join_us/join_us.php`
     })
+    document.querySelector(`#cr-0`).addEventListener(`click`, () => {
+        window.location.href = `/chess-OnServer/site/messages/message.php`
+    })
 }
 
 

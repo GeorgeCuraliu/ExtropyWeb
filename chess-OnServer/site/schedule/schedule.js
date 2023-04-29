@@ -102,8 +102,7 @@ function search_for_delete_buttons(){
       delete_buttons.addEventListener(`click`, ()=>{
       let card = delete_buttons.closest(`.card`);//when the event listener trigered, it will delete the card
       updateServerTasksData("delete", null, null, null, card.id, null);
-      card.remove();  
-      search_for_buttons();  
+      card.remove();   
   })  
 })
 }
