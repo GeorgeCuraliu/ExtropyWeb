@@ -31,7 +31,7 @@ if(cookie){
 }
 
 
-window.onload = async () => {//wil get the recruits data and process this for tha stats in the right
+async function getRecruitsData(){//wil get the recruits data and process this for tha stats in the right
   let recruits = await events.getRecruits();//will get the recruits data
   let classes = {"07":0, "08": 0, "09":0, "10":0, "11":0, "12":0}; //there it will get the number of recruits per every class
   let departamentR = {"programming": 0, "building": 0, "propaganda": 0};
@@ -93,6 +93,7 @@ selectedJSONfile = loadEventsFiles();//whill will set default option for files a
 
 
 function newImage(){
+  console.log("image member")
   var fileInput = document.getElementById("imageInput");//from the input block stores the image
   var file = fileInput.files[0];//it will store the img in a var, not array
   if(file){
@@ -217,6 +218,7 @@ function searchForDeleteButtons(){//this will send the data from a card that was
 function newImageEvent(){
   var fileInputE = document.getElementById("image-inpu-event");//from the input block stores the image
   var fileE = fileInputE.files[0];//iw will store the img in a var, not array
+  console.log("image event")
   if(fileE){
     var readerE = new FileReader();
       readerE.readAsDataURL(fileE);
@@ -336,5 +338,5 @@ function eventListenerForButtons(){//will "search" for event listeners
   document.querySelector(`#confirm-account-user`).addEventListener(`click`, accountUser);//this 2 event listeners will call a function that, trought module, will send to the server the name of the user and will change its type of account, so new members will be "members" in my db too
   document.querySelector(`#confirm-account-member`).addEventListener(`click`, accountMember);//i have to call another function for this so the anaonymous dont repeat twice
 }
-
-
+eventListenerForButtons()
+getRecruitsData();

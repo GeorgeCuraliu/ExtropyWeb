@@ -1,219 +1,65 @@
 {
     "0": {
-        "name": "3sdawdsd",
-        "reason": "aweqw341",
-        "classPD": "10C",
-        "number": "23231111",
+        "name": "31",
+        "reason": "awdd",
+        "classPD": "11B",
+        "number": "2313",
         "departament": "programming"
     },
     "1": {
-        "name": "3sdawdsd",
-        "reason": "aweqw341",
-        "classPD": "10C",
-        "number": "23231111",
+        "name": "123",
+        "reason": "gfsfsef",
+        "classPD": "12D",
+        "number": "2313222",
         "departament": "propaganda"
     },
     "2": {
-        "name": "3sdawdsd",
-        "reason": "aweqw341",
-        "classPD": "10C",
-        "number": "23231111",
-        "departament": "building"
+        "name": "ggseeawwa",
+        "reason": "2313",
+        "classPD": "09A",
+        "number": "2313222",
+        "departament": "programming"
     },
     "3": {
-        "name": "3sdawdsd",
-        "reason": "aweqw341",
-        "classPD": "10C",
-        "number": "23231111",
+        "name": "ggseeawwa",
+        "reason": "2313",
+        "classPD": "09A",
+        "number": "2313222",
         "departament": "building"
     },
     "4": {
-        "name": "3sdawdsd",
-        "reason": "aweqw341",
-        "classPD": "10C",
-        "number": "23231111",
-        "departament": "propaganda"
+        "name": "ggseeawwa",
+        "reason": "2313",
+        "classPD": "09A",
+        "number": "2313222",
+        "departament": "building"
     },
     "5": {
-        "name": "3sdawdsd",
-        "reason": "aweqw341",
-        "classPD": "10C",
-        "number": "23231111",
-        "departament": "propaganda"
+        "name": "ggseeawwa",
+        "reason": "2313",
+        "classPD": "09A",
+        "number": "78987",
+        "departament": "building"
     },
     "6": {
-        "name": "3sdawdsd",
-        "reason": "aweqw341",
-        "classPD": "10C",
-        "number": "23231111",
-        "departament": "programming"
+        "name": "aa",
+        "reason": "23131231111",
+        "classPD": "09A",
+        "number": "78987",
+        "departament": "building"
     },
     "7": {
-        "name": "3sdawdsd",
-        "reason": "aweqw341",
-        "classPD": "10C",
-        "number": "23231111",
-        "departament": "programming"
+        "name": "aa",
+        "reason": "23131231111",
+        "classPD": "09A",
+        "number": "78987",
+        "departament": "building"
     },
     "8": {
-        "name": "3sdawdsd",
-        "reason": "aweqw341",
-        "classPD": "10C",
-        "number": "23231111",
-        "departament": "propaganda"
-    },
-    "9": {
-        "name": "3sdawdsd",
-        "reason": "aweqw341",
-        "classPD": "10C",
-        "number": "23231111",
-        "departament": "building"
-    },
-    "10": {
-        "name": "3sdawdsd",
-        "reason": "aweqw341",
-        "classPD": "10C",
-        "number": "23231111",
-        "departament": "building"
-    },
-    "11": {
-        "name": "3sdawdsd",
-        "reason": "aweqw341",
-        "classPD": "10C",
-        "number": "23231111",
-        "departament": "programming"
-    },
-    "12": {
-        "name": "3sdawdsd",
-        "reason": "aweqw341",
-        "classPD": "10C",
-        "number": "23231111",
-        "departament": "programming"
-    },
-    "13": {
-        "name": "3sdawdsd",
-        "reason": "aweqw341",
-        "classPD": "10C",
-        "number": "23231111",
-        "departament": "propaganda"
-    },
-    "14": {
-        "name": "3sdawdsd",
-        "reason": "aweqw341",
-        "classPD": "10C",
-        "number": "23231111",
-        "departament": "propaganda"
-    },
-    "15": {
-        "name": "3sdawdsd",
-        "reason": "aweqw341",
-        "classPD": "10C",
-        "number": "23231111",
-        "departament": "building"
-    },
-    "16": {
-        "name": "3sdawdsd",
-        "reason": "aweqw341",
-        "classPD": "10C",
-        "number": "23231111",
-        "departament": "propaganda"
-    },
-    "17": {
-        "name": "3sdawdsd",
-        "reason": "aweqw341",
-        "classPD": "10C",
-        "number": "23231111",
-        "departament": "programming"
-    },
-    "18": {
-        "name": "3sdawdsd",
-        "reason": "aweqw341",
-        "classPD": "10C",
-        "number": "23231111",
-        "departament": "programming"
-    },
-    "19": {
-        "name": "we12a",
-        "reason": "wd12e",
-        "classPD": "10D",
-        "number": "2313",
-        "departament": "programming"
-    },
-    "20": {
-        "name": "we12a",
-        "reason": "wd12e",
-        "classPD": "11D",
-        "number": "2313",
-        "departament": "programming"
-    },
-    "21": {
-        "name": "we12a",
-        "reason": "wd12e",
-        "classPD": "12C",
-        "number": "2313",
-        "departament": "programming"
-    },
-    "22": {
-        "name": "we12a",
-        "reason": "wd12e",
-        "classPD": "09A",
-        "number": "2313",
-        "departament": "programming"
-    },
-    "23": {
-        "name": "we12a",
-        "reason": "wd12e",
-        "classPD": "09A",
-        "number": "2313",
-        "departament": "programming"
-    },
-    "24": {
-        "name": "we12a",
-        "reason": "wd12e",
-        "classPD": "09A",
-        "number": "2313",
-        "departament": "programming"
-    },
-    "25": {
-        "name": "we12a",
-        "reason": "wd12e",
-        "classPD": "12B",
-        "number": "2313",
-        "departament": "programming"
-    },
-    "26": {
-        "name": "we12a",
-        "reason": "wd12e",
-        "classPD": "12B",
-        "number": "2313",
-        "departament": "programming"
-    },
-    "27": {
-        "name": "we12a",
-        "reason": "wd12e",
-        "classPD": "07B",
-        "number": "2313",
-        "departament": "programming"
-    },
-    "28": {
-        "name": "we12a",
-        "reason": "wd12e",
-        "classPD": "07B",
-        "number": "2313",
-        "departament": "programming"
-    },
-    "29": {
-        "name": "we12a",
-        "reason": "wd12e",
-        "classPD": "07B",
-        "number": "2313",
-        "departament": "programming"
-    },
-    "30": {
-        "name": "why not",
-        "reason": "wad2",
-        "classPD": "10D",
-        "number": "2313",
+        "name": "wdasdqawd",
+        "reason": "asa",
+        "classPD": "07A",
+        "number": "31",
         "departament": "programming"
     }
 }

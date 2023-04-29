@@ -22,7 +22,7 @@ async function logIn(){//will collect the data for log in and check at the serve
         
 }
 
-function newUser(){//this will check if the var ar not empty and send the data to server to create enw user if the name is free 
+function newUser(){//this will check if the var ar not empty and send the data to server to create new user if the name is free 
     var name = document.getElementById("name").value;
     var password0 = document.getElementById("password0").value;
     var password1 = document.getElementById("password1").value;

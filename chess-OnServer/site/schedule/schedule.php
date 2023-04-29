@@ -12,20 +12,7 @@
         <div id="ideas" class="sections">
             <h2 class="section-title">Ideas</h2>
             <div id="cards-ideas" class="card-container">
-                <div id="a0" class="card">
-                    <div class="left-card">
-                        <div class="card-title">title</div>
-                        <div class="card-content">content</div>
-                    </div>
-                    <div class="right-card">
-                        <div class="card-creator">creator</div>
-                        <div class="buttons-idea-container">
-                            <button id="move-left" class="button-idea fas fa-reply"></button>
-                            <button id="delete" class="button-idea fas fa-trash"  ></button>
-                            <button id="move-right" class="button-idea fas fa-share"></button>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
             <div id="card-add-ideas" class="card-add" >
                 <button id="card-add-button-ideas" class="card-add-button">+ add element</button>
