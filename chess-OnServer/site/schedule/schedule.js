@@ -140,7 +140,7 @@ function search_for_left_arrow(){
   })
 }
 
-//this will be a functionthat will send data to the servere-will be just a php file with mutiple operation types, so data that isnt used will be set undefined
+//this will be a function that will send data to the server-will be just a php file with mutiple operation types, so data that isnt used will be set undefined
 //id is the index of task
 
 //"index" => getting the last index

@@ -246,3 +246,19 @@ body{
     height: 3vh;
     z-index: 999;
 }
+#message-section{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.message{
+    width: 30vw;
+    min-width: 300px;
+    min-height: 100px;
+    height: 24vw;
+    border: 1.5vw solid var(--purple);
+    background-color: #f27dce;
+    display: block;
+}

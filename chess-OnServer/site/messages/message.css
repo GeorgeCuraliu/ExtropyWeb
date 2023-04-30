@@ -39,7 +39,7 @@ body {
 }
 /* end of LAYOUT RESET */
 
-/* our app is inside this container - we use it to secify the width and to display flex - it's easier to style the sections this way */
+/*use it to secify the width and to display flex*/
 .container {
   display: flex;
   width: 1050px;
@@ -59,7 +59,7 @@ section {
   padding: 15px 22px;
 }
 
-/* adding margin-bottom to every row inside tools-menu (Shapes, Options, Colors and Buttons) */
+/* adding margin-bottom to every row inside tools-menu*/
 .tools-menu .row {
   margin-bottom: 20px;
 }
@@ -207,10 +207,10 @@ section {
 /* style for drawing-board section */
 .drawing-board {
   flex: 1; /* to expand and to use all remainining space inside .container */
-  overflow: hidden; /* specifies that the content that doesn't fit in this section will not be displayed */
+  overflow: hidden;
 }
 
-/* style for the canvas -> here we set width and height (making it the same size as the drawing-board section) */
+
 .drawing-board canvas {
   width: 100%;
   height: 100%;

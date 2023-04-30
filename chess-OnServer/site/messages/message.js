@@ -98,27 +98,19 @@ function downlaod(){
     createEl.remove();
 }
 function send() {
-    // console.log("sending image to server");
-    
-    // // get the base64-encoded data URL of the canvas
-    // var dataURL = canvas.toDataURL();
-    
-    // // create a JSON object with the data
-    // var data = {
-    //   img: dataURL
-    // };                                               need php file on the server side
-    
-    // // convert the JSON object to a string
-    // var json_data = JSON.stringify(data);
-    
-    // var xhr = new XMLHttpRequest();
-    // xhr.open("POST", "/chess-OnServer/server/messages.json", true);
-    
-    // // set the content type header to application/json
-    // xhr.setRequestHeader("Content-Type", "application/json");
-    
-    // // send the data to the JSON file
-    // xhr.send(json_data);
+    let canvasUrl = canvas.toDataURL();
+    console.log(canvasUrl)
+    $.ajax({
+        type:"POST",
+        url: "http://localhost:1233/chess-OnServer/server/createMessage.php",
+        data: {message: canvasUrl},
+        success: function(response, status, xhr){
+          console.log(response);
+        },
+        error: function(response, status, xhr){
+            
+        }
+      });
   }
 
 toolButtons.forEach(button =>{

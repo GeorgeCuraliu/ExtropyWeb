@@ -98,6 +98,9 @@
 			<p class="account-interaction" id="response-paragraph-account"></p>
         </div>
     </div>
+	<div id="message-section">
+		<img class="message" src="" alt="">
+	</div>
 
 	<script src="aum.js" type="module"></script>
 </body >

@@ -60,7 +60,40 @@ async function getRecruitsData(){//wil get the recruits data and process this fo
 
   //there i will call all the function that get data
   getSponsors();
+  loadMessages(); //the ones from the message section
 }
+
+async function loadMessages(){
+  let messages = await $.ajax({//getting the messages in base64
+    type: "GET",
+    url: "http://localhost:1233/chess-OnServer/server/messages.json",
+    data: "json"
+  })
+  console.log(messages)
+  let messageContainer = document.querySelector(`#message-section`);
+  for(let i = 0; i < Object.keys(messages).length; i++){
+
+    let img64 = messages[i].message;
+    
+    // remove the data URI scheme and whitespace characters
+    img64 = img64.replace("data:image/png;base64,", "").replace(/\s/g, "");
+    // decode the base64-encoded string into binary data
+    let imgData = atob(img64);
+    // convert the binary data into a typed array
+    let imgDataArray = new Uint8Array(imgData.length);
+    for (let i = 0; i < imgData.length; i++) {
+      imgDataArray[i] = imgData.charCodeAt(i);
+    }
+    // create a blob from the binary data
+    let blob = new Blob([imgDataArray], {type: "image/png"});
+    // create a URL for the blob
+    let imgUrl = URL.createObjectURL(blob);
+    
+
+    messageContainer.innerHTML += `<img class="message" src="${imgUrl}" alt="">`
+  }
+}
+
 
 async function getSponsors(){
     console.log(events.getSponsors())
@@ -163,29 +196,13 @@ function showData(data){
     let blob = new Blob([imgDataArray], {type: "image/png"});
     // create a URL for the blob
     let imgUrl = URL.createObjectURL(blob);
-    
-    let name = data[i].name;
-    let description = data[i].description;
-    let destionationOfCard;
 
-    if(data[i].departament == "pr"){
-      console.log("pr");
-      destionationOfCard = "pr";
-
-    }else if(data[i].departament == "programming"){
-      console.log("programming");
-      destionationOfCard = "programming";
-    }else{
-      console.log("building");
-      destionationOfCard = "building";
-    }
-
-    let containerOfcard = document.querySelector(`#${destionationOfCard}`);//will create members cards with the specific data of each one
+    let containerOfcard = document.querySelector(`#${data[i].departament}`);//will create members cards with the specific data of each one
     containerOfcard.innerHTML +=`
     <div class="card flex">
 			<img src="${imgUrl}" class="img">
-			<div class="text name">${name}</div>
-			<div class="text descript">${description}</div>
+			<div class="text name">${data[i].name}</div>
+			<div class="text descript">${data[i].description}</div>
 			<img src="/chess-OnServer/site/!sources/img_svg/close.png" alt="" class="delete-button">
 		</div>
     `;
