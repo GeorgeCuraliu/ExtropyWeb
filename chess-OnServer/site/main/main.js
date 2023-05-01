@@ -116,7 +116,7 @@ function accountPage(){
 accountPage();
  
 function eventListenersUpdate(member){//thi will check for divs with event listeners 
-    if(member){//member is type of acoount that is logged in(extropy member or just user)
+    if(member){//member is type of acount that is logged in(extropy member or just user)
         document.querySelector(`#addMembersAboutUs`).addEventListener(`click`, () => {
             console.log("a");
             window.location.href = `/chess-OnServer/site/aboutUsModify/aum.php`;

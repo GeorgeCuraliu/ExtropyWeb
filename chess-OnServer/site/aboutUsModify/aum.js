@@ -276,7 +276,8 @@ function sendDataEvent(){//send new member to the server
 }
 
 function createNewJSONfile(){//will create a new json file that will be used as a a storage for a year of events
-  let JSONname = document.getElementById(`new-json-file-event`).value;
+  let JSONname = document.querySelector(`#new-json-file-event`).value;
+  console.log(JSONname + "creating new json file")
   if(JSONname){
     JSONname += `.json`;
     $.ajax({

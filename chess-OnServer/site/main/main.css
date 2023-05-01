@@ -301,12 +301,14 @@
         animation: sponsors;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
+        border-left: 1vw solid rgba(255, 255, 255, 0);
     }
     #sponsors-p{
         position: relative;
         left: 30%;
         font-size: 2vh;   
         color: var(--lightPink);
+        z-index: 999;
      }
    @keyframes sponsors{
     0%{

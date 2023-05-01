@@ -51,7 +51,7 @@
 				<select name="file" id="event-file-name"></select>
 				<input id="event-name" type="text">
 				<input id="event-date" type="date">
-				<input id="new-json-file-event" type="number" placeholder="format:2019-2020">
+				<input id="new-json-file-event" placeholder="format:2019-2020">
 				<button id="createJSONfile">Confirm new JSON events file</button>
 			</div>
 			<textarea placeholder="Please type here the propaganda for this event" rows="4" cols="40" id="announcement"></textarea>

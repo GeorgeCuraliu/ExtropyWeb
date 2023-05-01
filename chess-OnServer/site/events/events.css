@@ -106,6 +106,13 @@ p{
     font-weight: bolder;
     color: #f27dce;
 }
+.description{
+    width: 30vw;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 0.8vw;
+    border-top: 1vh solid rgba(0, 0, 0, 0);
+}
 .description-container::before{
     content: "";
     position: absolute;

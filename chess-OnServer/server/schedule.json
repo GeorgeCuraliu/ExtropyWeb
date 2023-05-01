@@ -1,44 +1,32 @@
 {
     "0": {
-        "title": "aw",
+        "title": "task",
         "creator": "MrBlec",
-        "content": "dawd",
-        "section": "Done"
+        "content": "nre format for task container",
+        "section": "toDo"
     },
     "1": {
-        "title": "awdaa",
+        "title": "responsive css",
         "creator": "MrBlec",
-        "content": "awdddddddd",
-        "section": "Done"
+        "content": "urjent",
+        "section": "toDo"
     },
     "2": {
-        "title": "adaw",
+        "title": "aum",
         "creator": "MrBlec",
-        "content": "dasdawdawdawddawdasdawdawdawdaw",
-        "section": "Done"
+        "content": "some design?",
+        "section": "toDo"
     },
     "3": {
-        "title": "awdas",
+        "title": "main",
         "creator": "MrBlec",
-        "content": "dawdasdawdadwdasdawdasuidhjbnaiwudbhasjkdnawudhasjdnawudhasjdnawuidh",
-        "section": "inProgess"
+        "content": "effect for post-hover where squares go back under the div",
+        "section": "toDo"
     },
     "4": {
-        "title": "awd",
+        "title": "chess",
         "creator": "MrBlec",
-        "content": "awdawd",
-        "section": "Done"
-    },
-    "5": {
-        "title": "awd",
-        "creator": "MrBlec",
-        "content": "awdawd",
+        "content": "drag-drop sys",
         "section": "ideas"
-    },
-    "6": {
-        "title": "awd",
-        "creator": "MrBlec",
-        "content": "awdaw",
-        "section": "toDo"
     }
 }

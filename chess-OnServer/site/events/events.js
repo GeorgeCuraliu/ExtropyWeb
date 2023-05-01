@@ -35,7 +35,7 @@ window.onload = async function(){//will get the events data from the specific js
         document.querySelector(`#events-container`).innerHTML += `
         <div class="event">
             <div class="description-container">
-                <p>${eventsData[i].description}</p>
+                <p class="description">${eventsData[i].description}</p>
                 <p class="name" >${eventsData[i].name}</p>
                 <p class="date">${eventsData[i].date}</p>
             </div>
