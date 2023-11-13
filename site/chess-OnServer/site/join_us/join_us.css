@@ -1,0 +1,128 @@
+:root{
+--white: #fdfdfe;
+--lightPurple: #d8c2fe;
+--purple: #6a13fb;
+--lightPink: #f27dce;
+--neonPink: #fa099a;
+--pastelTurcuaz: #a8eaeb;
+--lightTurcuaz: #02fcf9;
+--turcuaz: #0bdcdb;
+--darkBlue: #1b1464;
+--black: #010132;
+}
+    
+body, ::after, ::before, *{
+    border: 0;
+    padding: 0;
+    margin:0;
+}
+body{
+    background: linear-gradient(to bottom, var(--black) 0%, var(--darkBlue) 50%, var(--purple) 100%);
+    overflow-x: hidden;
+    width: 100vw;
+    min-height: 100vh;
+}
+#container{
+    width: 90vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 5vw;
+    top: 3vh;
+    align-items: center;
+}
+header{
+    width: 90vh;
+    height: 20vh;
+    position: relative;
+}
+section{
+    width: 90vh;
+    height: 32vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#squares{
+    height: 20vh;
+    position: absolute;
+    left: 11vw;
+}
+#join-us{
+    position: absolute;
+    color: var(--neonPink);
+    left: calc(2vw + 11vw);
+    top: 8vh;
+    font-size: 6vh;
+}
+#extropy-guy{
+    border-left: 0.7vw solid;
+    border-color: rgba(255, 255, 255, 0);
+    width: 10vw;
+}
+section div{
+    width: 130vh;
+    height: 30vh;
+    background-image: url("../!sources/img_svg/join_us_ask_container.svg");
+    background-repeat: no-repeat;
+    display: block;
+}
+div p{
+    position: relative;
+    color: var(--neonPink);
+    left: 2vw;
+    top: 3vh;
+    font-size: 2vw;
+}
+input, select{
+    position: relative;
+    top: 8vh;
+    left: 4vw;
+    width: 80%;
+    height: 2.7vh;
+    border-radius: 5px;
+    background-color: var(--lightPink);
+}
+li{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    position: relative;
+    left: 5%;
+    justify-content: space-around;
+    top: 5vh;
+    cursor: pointer;
+    color: var(--lightPurple);
+    font-size: 2vh;
+}
+li p{
+    top: 1vh;
+    font-size: 2.3vh;
+    padding: 0.4vh;
+}
+footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+}
+footer p{
+    width: 40vh;
+    height: 7vh;
+    border: 2px var(--neonPink);
+    background-color: var(--lightTurcuaz);
+    position: initial;
+    border-radius: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4vh;
+    cursor: pointer;
+}
+.selected{
+    border: 0.1vh solid;
+    border-color: var(--lightTurcuaz);
+    border-radius: 0.3vw;
+}

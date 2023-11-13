@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 397.76 446">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #a8eaeb;
+      }
+
+      .cls-2 {
+        fill: #ec008c;
+      }
+    </style>
+  </defs>
+  <g id="ABOUT_US" data-name="ABOUT US">
+    <g>
+      <path class="cls-2" d="m16.7,0v111.78l3.11-14.03V14.03h354.29v327.67h-231.36l-3.11,14.03h237.58V0H16.7Z"/>
+      <polygon class="cls-2" points="24.58 287.36 24.58 340.74 161.75 340.74 145.62 356 8.45 356 8.45 302.62 24.58 287.36"/>
+      <path class="cls-1" d="m371.19,446H0v-48.66h397.76l-26.57,48.66Zm-366.11-5.09h363.09l21.01-38.49H5.09v38.49Z"/>
+    </g>
+  </g>
+</svg>

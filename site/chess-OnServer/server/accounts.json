@@ -1,0 +1,16 @@
+{
+    "0": {
+        "name": "MrBlec",
+        "password": "MrBlec-admin",
+        "chessMatchesWon": 0,
+        "ticTacToeMatchesWon": 0,
+        "extropy": "true"
+    },
+    "1": {
+        "name": "Reee",
+        "password": "Reee",
+        "chessMatchesWon": 0,
+        "ticTacToeMatchesWon": 0,
+        "extropy": false
+    }
+}

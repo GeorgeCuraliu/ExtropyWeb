@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 279.59 240.07">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #f27dce;
+        stroke-width: 11.15px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: none;
+      }
+
+      .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-6 {
+        fill: #ff85d0;
+      }
+
+      .cls-2 {
+        stroke: #a8eaeb;
+        stroke-width: 12.16px;
+      }
+
+      .cls-7 {
+        fill: #a8eaeb;
+      }
+
+      .cls-8 {
+        fill: #d8c2fe;
+      }
+
+      .cls-9 {
+        fill: url(#_Новый_образец_узора_6);
+      }
+
+      .cls-10 {
+        fill: #f27dce;
+      }
+
+      .cls-3 {
+        stroke: #6a13fb;
+        stroke-width: 10.14px;
+      }
+    </style>
+    <pattern id="_Новый_образец_узора_6" data-name="Новый образец узора 6" x="0" y="0" width="314.98" height="314.98" patternTransform="translate(798.23 -2582.93)" patternUnits="userSpaceOnUse" viewBox="0 0 314.98 314.98">
+      <g>
+        <rect class="cls-4" width="314.98" height="314.98"/>
+        <rect class="cls-6" width="314.98" height="314.98"/>
+      </g>
+    </pattern>
+  </defs>
+  <g id="ABOUT_US" data-name="ABOUT US">
+    <g>
+      <rect class="cls-1" x="37.03" y="11.69" width="215.97" height="221.85"/>
+      <rect class="cls-2" x="23.45" y="8.61" width="215.97" height="221.85"/>
+      <rect class="cls-3" x="27.9" y="5.07" width="215.97" height="221.85"/>
+      <rect class="cls-8" x="250.39" y="97.65" width="27.43" height="15.5"/>
+      <rect class="cls-5" x="139.35" y="14.71" width="100.75" height="15.5"/>
+      <rect class="cls-7" x="219.69" y="55.87" width="26.74" height="8"/>
+      <rect class="cls-7" x="229.51" y="29.24" width="14.01" height="8"/>
+      <rect class="cls-10" x="253" y="44.31" width="13.37" height="8"/>
+      <rect class="cls-8" y="181.66" width="26.74" height="8"/>
+      <rect class="cls-7" x="9.83" y="155.02" width="14.01" height="8"/>
+      <rect class="cls-10" x="33.32" y="170.1" width="13.37" height="8"/>
+      <rect class="cls-10" x="28.48" y="131.09" width="35.63" height="8"/>
+      <rect class="cls-8" x="215.48" y="127.98" width="26.74" height="8"/>
+      <rect class="cls-7" x="225.31" y="101.35" width="14.01" height="8"/>
+      <rect class="cls-9" x="245.64" y="113.15" width="13.37" height="8"/>
+      <rect class="cls-10" x="243.96" y="77.41" width="35.63" height="8"/>
+      <rect class="cls-10" x="10.15" y="232.07" width="21.14" height="8"/>
+      <rect class="cls-7" x="1.1" y="217.59" width="21.14" height="8"/>
+      <rect class="cls-10" x="36.75" y="219.27" width="35.63" height="8"/>
+    </g>
+  </g>
+</svg>
