@@ -126,3 +126,12 @@ footer p{
     border-color: var(--lightTurcuaz);
     border-radius: 0.3vw;
 }
+
+@media only screen and (max-width: 768px){/*tablet*/
+    section{
+        width: 85vw;
+    }
+    section div{
+        width: 85vw;
+    }
+}
