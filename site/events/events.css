@@ -110,8 +110,9 @@ p{
     width: 30vw;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    font-size: 0.8vw;
+    font-size: 1vw;
     border-top: 1vh solid rgba(0, 0, 0, 0);
+    overflow-y: scroll;
 }
 .description-container::before{
     content: "";
@@ -155,7 +156,11 @@ p{
     font-size: 4vh;
 }
 
-
+@media only screen and (max-width: 768px){
+    .name{
+        left: 22vw;
+    }
+}
 
 
 

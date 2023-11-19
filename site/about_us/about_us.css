@@ -19,13 +19,15 @@
 html{
     height: 110vh;
     background: linear-gradient(to bottom, var(--black) 0%, var(--darkBlue) 50%, var(--purple) 100%);
+    width: 100vw;
+    overflow-y: hidden;
 }
 body{
     display: flex;
     justify-content: space-around;
     background: linear-gradient(to bottom, var(--black) 0%, var(--darkBlue) 50%, var(--purple) 100%);
     width: 100vw;
-    height: 100%;
+    min-height: 120vh;
     position: relative;
     z-index: 10;
     overflow-x: hidden;
@@ -59,6 +61,7 @@ body{
     top: calc(80px + 2vh);
     left: 0;
     cursor: pointer;
+    visibility: hidden;
 }
 #container{
     width: 70%;
@@ -117,7 +120,7 @@ p{
     font-size: larger;
     color: var(--neonPink);
     position: relative;
-    top: 2vh;
+    top: 2vw;
     left: 0vw;
 }
 #members{
@@ -125,19 +128,17 @@ p{
     height: 32vh;
     position: relative;
     top: 3vh;
-    left: 2%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 .card{
-    width: 15%;
-    height: 80%;
     margin: 1%;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
+    height: 24vh;
 }
 .animation-card{
     animation-name: move-card;
@@ -309,5 +310,86 @@ p{
     to{
         width: 53vw;
         height: 31.8vw;
+    }
+}
+
+@keyframes showcase2{
+    from{
+        width: 0;
+        height: 0;
+    }
+    to{
+        width: 80vw;
+        height: 45vw;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .departament-name{
+        font-size: 1.6vw;
+    }
+    #showcase-container{
+        width: 80vw;
+        height: 45vw;
+        animation-name: showcase2;
+    }
+    #showcase-member-picture{
+        left: 3%;
+        top: 11%;
+    }
+    #showcase-departament {
+        top: 54%;
+        font-size: 2vw;
+    }
+    #showcase-name {
+        left: 35.6vw;
+        top: 13%;
+        font-size: 2vw;
+    }
+    #showcase-description {
+        left: 29.5vw;
+    }
+}
+@media only screen and (max-width: 425px){
+    .frame-svg {
+        height: 23vw;
+        width: 23vw;
+    }
+    .card{
+        height: 20vw;
+    }
+    .member-picture{
+        width: 19vw;
+        height: 18vw;
+        top: 0.1vw;
+    }
+    .name-container{
+        width: 23vw;
+        top: 19vw;
+    }
+    .member-name{
+        top: 8.4vw;
+        font-size: 5vw;
+        position: absolute;
+        top: 2.7vw;
+    }
+    .departament{
+        width: 15vw;
+        height: 15vw;
+    }
+    #departaments-container{
+        height: 20vw;
+    }
+    #colored-squares{
+        width: 60vw;
+        left: 45px;
+    }
+    #ABOUT-US{
+        width: 40vw;
+        left: 45px;
+    }
+    #extropy-guy{
+        width: 40px;
+        height: 40px;
     }
 }
