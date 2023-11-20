@@ -34,8 +34,13 @@ window.onload = async function(){//will get the events data from the specific js
             event.classList.add(`event-reverse`);
             event.querySelector(`.description-container`).classList.add(`description-container-reverse`);
             event.querySelector(`.image-container`).classList.add("image-reverse");
-            event.querySelector(`.name`).style.left = "50vw";
-            event.querySelector(`.date`).style.left = "50vw";
+            if(window.screen.width > 768){
+                event.querySelector(`.name`).style.left = "50vw";
+                event.querySelector(`.date`).style.left = "50vw";
+            }else{
+                event.querySelector(`.name`).style.left = "55vw";
+                event.querySelector(`.date`).style.left = "55vw"; 
+            }
         }
         reverseEvent = !reverseEvent;
     }

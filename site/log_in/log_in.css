@@ -63,6 +63,7 @@ body, ::after, ::before, *{
     background-color: var(--darkBlue);
     color: white;
     font-size: 2.3vh;
+    z-index: 999;
 }
 #national-numb{
     position: absolute;
@@ -133,7 +134,7 @@ body, ::after, ::before, *{
     position: absolute;
     top: 0;
     left: 0.5vh;
-    z-index: 9999;
+    z-index: 998;
     width: 14vh;
     height: 150px;
 } 
@@ -142,7 +143,7 @@ body, ::after, ::before, *{
     position: absolute;
     top: calc(27%);
     left: 1vh;
-    z-index: 9999;
+    z-index: 998;
     width: 16.5vh;
     height: 20vh;
 }
@@ -151,7 +152,7 @@ body, ::after, ::before, *{
     position: absolute;
     top: 36vh;
     right: 0.5vh;
-    z-index: 9999;
+    z-index: 998;
     width: 14vh;
     height: 150px;
 }
@@ -160,7 +161,7 @@ body, ::after, ::before, *{
     position: absolute;
     top: 2.3vh;
     right: 1vh;
-    z-index: 9999;
+    z-index: 998;
     width: 16.5vh;
     height: 20vh;
 }
@@ -185,3 +186,47 @@ body, ::after, ::before, *{
   .do-a-flip {
     animation: flipA 2s ease-in-out 1;
   }
+
+@media only screen and (max-width: 768px){
+    #elements-container-1::before {
+        width: 10vw;
+    }
+    #elements-container-1::after {
+        width: 14vw;
+        top: 37vh;
+    }
+    #elements-container::before {
+        width: 10vw;
+        top: 28vh;
+    }
+    #elements-container::after {
+        width: 14vw;
+        bottom: 37vh;
+    }
+    #national-numb{
+        left: 22vw;
+    }
+    #international-numb{
+        right: 22vw;
+    }
+}
+@media only screen and (max-width: 425px){
+    #elements-container-1::before {
+        width: 10vw;
+    }
+    #elements-container-1::after {
+        width: 14vw;
+        top: 43vh;
+    }
+    #elements-container::before {
+        width: 10vw;
+        top: 36vh;
+    }
+    #elements-container::after {
+        width: 14vw;
+        bottom: 37vh;
+    }
+    #coords{
+        width: 125px;
+    }
+}
